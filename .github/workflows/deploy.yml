@@ -34,6 +34,15 @@ jobs:
         working-directory: "./Digital Visiting Card"
         run: npm run build
 
+      - name: Check build output
+        run: |
+         echo "Current directory:"
+         pwd
+         echo "All dist folders:"
+         find . -type d -name "dist" -print
+         echo "Digital Visiting Card contents:"
+         ls -la "Digital Visiting Card"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
